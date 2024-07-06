@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="style.css"  media="screen,projection"/>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+	
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/ico" href="favicon.png" />
+	
+    <title>BSides Strasbourg 2024</title>
+
+    <!-- 
+    Uncomment to to enable redirection to langage folder
+    Detects langage from browser settings 
+    <script type="text/javascript">
+        var userLang = (navigator.language || navigator.userLanguage).substring(0, 2).toLowerCase();
+        if (userLang == "fr") {
+            document.location.href="/fr"; 
+        }
+    </script> -->
+</head>
+
+<body>
+	
+    <div style="height: 100vh; width: 100%; background-color: #1a2039;">
+        <div class="navbar-fixed">
+            <nav class="top-navbar transparent z-depth-0 hide-on-med-and-down">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <div id="navbar-content"></div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div style="height: 100%;" class="center-align">
+            <div class="hero-info">
+                <img alt="Logo BSides 2024 - Compétition" style="max-height: 200px; max-width: 80% !important;" src="images/logo_min.png">
+                <br><br>
+                <h1 class="hero-title">Tuesday June 18, 2024</h1>
+                <h1 class="hero-title">The Technical <span class="glitch">Cybersecurity</span> Conference</h1>
+                <h1 class="hero-title">Le Phare Citadelle - Strasbourg</h1>
+                <br><br>
+                <a href="#tickets" class="waves-effect btn white black-text rounded"><i class="material-icons left">confirmation_number</i>Get your ticket now</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-block container">
+        <div class="row">
+            <div class="col s12 l7">
+                <h1 class="container-title" style="font-weight: bold; line-height: 1.2em; word-spacing: -2px;">The legendary <span style="color: #4b89b2;">cybersecurity conference</span> arrives in Strasbourg. A day of <span style="color: #cab4a2;">technical conferences</span>, <span style="color: #4b89b2;">workshops</span> led by international experts and a <span style="color: #cab4a2;">hacking village</span>. And a boat.</h1>
+                <p>
+                    <div class="chip">DEFENSE</div>
+                    <div class="chip">OFFENSE</div>
+                    <div class="chip">CRYPTOGRAPHY</div>
+                    <div class="chip">DATA FORENSICS AND INCIDENT RESPONSE</div>
+                    <div class="chip">NETWORK</div>
+                </p>
+            </div>
+            <div class="col s12 l5" style="padding: 30px; margin-top: -20px;">
+                <div class="row">
+                    <div class="col s6">
+                        <h3 class="numbers">+700</h3>
+                        <div class="label">Participants</div>
+                    </div>
+                    <div class="col s6">
+                        <h3 class="numbers">1</h3>
+                        Hacking Village
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        <h3 class="numbers">+10</h3>
+                        Technical <br> Conferences
+                    </div>
+                    <div class="col s6">
+                        <h3 class="numbers">2</h3>
+                        Hands-On <br> Workshops
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="container-title" style="font-weight: bold; padding-left: 20px;"><img src="images/arrow_left.png" style="height: 20px; margin-right: 10px;"> Speakers</h1>
+        <div class="speakers-block center-align">
+            <div id="rspeakers" class="row center-align"></div>
+            <a href="/speakers" class="waves-effect btn-flat color-light dark-text rounded white-text"><i class="material-icons right">arrow_circle_right</i>Discover our speakers</a>
+        </div>
+        <br><br>
+    </div>
+
+    <div id="tickets" class="ticket-block color-dark center-align">
+        <h1 class="container-title white-text">Book your ticket</h1>
+        <div class="row">
+            <div class="col s6">
+                <div class="card white price-card right">
+                    <a class="dark-text" href="https://www.billetweb.fr/bsides-strasbourg-2024">
+                        <div class="card-content">
+                            <span class="card-title">Regular</span>
+                            <h3>42€</h3>
+                            <p>Access to the entire conference and CTF. Also includes lunch and coffee, boat tour, and way more.</p>
+                            <br>
+                            <a href="https://www.billetweb.fr/bsides-strasbourg-2024" class="waves-effect btn-flat color-light rounded white-text">Book now<i class="material-icons right">arrow_circle_right</i></a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col s6">
+                <div class="card white price-card">
+                    <a class="dark-text" href="https://www.billetweb.fr/bsides-strasbourg-2024">
+                        <div class="card-content dark-text">
+                            <span class="card-title">Reduced</span>
+                            <h3>19€</h3>
+                            <p>Access to the entire conference and CTF. Also includes lunch and coffee, boat tour, and way more.</p>
+                            <p style="font-size: 12px;">For students and job seekers</p>
+                            <br>
+                            <a href="https://www.billetweb.fr/bsides-strasbourg-2024" class="waves-effect btn-flat color-light rounded white-text">Book now<i class="material-icons right">arrow_circle_right</i></a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="album">
+        <div class="img" style="background-image: url('images/halles_citadelles.jpg')"></div>
+        <div class="img" style="background-image: url('images/terasses.jpg')"></div>
+        <div class="img" style="background-image: url('images/lephare.jpg')"></div>
+        <div class="img" style="background-image: url('images/port.jpg')"></div>
+        <div class="img hide-on-med-and-down" style="background-image: url('images/boat_but_not_THE_boat.jpg')"></div>
+        <div class="inner color-dark left-align"><h1 class="container-title white-text">The venue: Le Phare Citadelle</h1>
+            <p><a class="btn-flat white-text" href="/venue">
+                <i class="material-icons right">arrow_circle_right</i> Discover the venue and its secrets
+            </a></p>
+        </div>
+    </div>
+
+    <div id="newsletter-block" class="newsletter-block color-light center-align">
+        <div class="container">
+            <br><br>
+            <h1 class="container-title white-text">Stay in the loop</h1>
+            <h5 style="margin-top: 0px; margin-bottom: 0px;" class="container-title white-text">Enter your e-mail address to receive future announcements</h5>
+            <iframe width="540" height="305" src="https://304c9294.sibforms.com/serve/MUIFALVX_uae95WtB1G8U7C6FhokwGXj-FwITB3jDZuYuoznXIROjMHKaPYSM_hFxPbS9iu0SoAli-2Qw8LMZSIXN_6FRsjJaSjHPSWRVo8zviK7SFH9gI7-_pVriiWVU6U6s99UoC6PnsRzoRfyCBcG4xzOtzskB0dt_4QQSsySJQvEhJE-vzDcKdYFpgO-ydA7gANsLIFcY-Kh" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>        
+        </div>
+    </div>
+
+    <section class="location">
+        <div class="map" style="background-image: url('/images/map.jpg'); background-position: 70%;"></div>
+        <div class="description color-dark">
+            <h1 class="container-title">The Location</h1>
+            <p style="text-align: justify;">Le Phare Citadelle is located in Strasbourg, in former industrial warehouses. Accessible by tram line D 20 minutes from Strasbourg station, France and 5 minutes from Kehl station, Germany.</p>
+            <a class="white-text" href="https://www.google.com/maps/dir/?api=1&destination=48.57314569052999, 7.777350146787826" target="_blank">
+                13 Rue de Nantes, 67100 Strasbourg
+                <i class="material-icons right">assistant_direction</i>
+            </a>
+        </div>
+    </section>
+  
+    <div class="partners-block center-align">
+        <h5 class="white-text">Major Partners</h5>
+        <br>
+        <a href="#" target="_blank"><img height="100" src="images/partners/photo.png" alt="Partner Logo"></a>
+        <br><br>
+        <a href="#" target="_blank"><img height="100" src="images/partners/photo.png" alt="Partner Logo"></a>
+    </div>
+    <div class="press-block grey darken-4 center-align">
+        <h6 class="white-text">Partners</h6>
+        <a href="#" target="_blank"><img width="100" src="images/partners/photo.png" alt="Partner Logo"></a>
+        <br>
+        <div class="row container partners-align">
+            <div class="col l4 s12"><a href="" target="_blank"><img width="100" src="images/partners/photo.png" alt="Partner"></a></div>
+            <div class="col l4 s12"><a href="" target="_blank"><img width="100" src="images/partners/photo.png" alt="Partner"></a></div>
+            <div class="col l4 s12"><a href="" target="_blank"><img width="100" src="images/partners/photo.png" alt="Partner"></a></div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <div id="tabbar"></div>
+
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/bsides.js"></script>
+    <script>
+        var firestore = firebase.firestore();
+	
+        function addRandomSpeakers() {
+            let speakers = [];
+
+            firestore.collection("speakers").get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                        speakers.push(doc.data());
+                });
+                speakers.sort(() => 0.5 - Math.random());
+                for (let i = 0; i < 4; ++i) {
+                    $('#rspeakers').append(`
+                        <div class="col s12 l3">
+                            <img src="${speakers[i].photoUrl}" class="circle" height="128">
+                            <h3 style="font-size: 24px; margin-bottom: 0px;">${speakers[i].name}</h3>
+                            <div class="origin">${speakers[i].company}</div>
+                            <div class="origin">${speakers[i].country}</div>
+                        </div>
+                    `);
+                }
+            });
+        }
+        addRandomSpeakers();
+    </script>
+</body>
+</html>

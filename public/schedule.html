@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen, projection"/>
+	<link type="text/css" rel="stylesheet" href="style.css"  media="screen, projection"/>
+	<link type="text/css" rel="stylesheet" href="css/grillade.css"  media="screen, projection"/>
+
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="icon" type="image/ico" href="favicon.png" />
+	
+	<title>BSides Strasbourg 2024</title>
+
+<body>
+	
+	<div class="page-header">
+		<div class="navbar-fixed">
+			<nav class="top-navbar transparent z-depth-0 hide-on-med-and-down">
+				<div class="container">
+					<div class="nav-wrapper">
+						<div id="navbar-content"></div>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div class="container">
+		    <h1 class="page-title white-text">Schedule</h1>
+            <p class="page-description white-text">For this year's event, BSides Strasbourg will take place over the course of one day on two simultaneous stages. Discover the program of conferences, workshops and demos.</p>
+        </div>
+	</div>
+
+	<div class="schedule-block container">
+
+        <br><br>
+        <br>
+
+		<div class="row">
+
+			<!-- Tabs -->
+			<div class="col s12">
+			  <ul class="tabs">
+				<li class="tab col s12 m4"><a class="active" href="#conference">Conferences</a></li>
+				<li class="tab col s12 m4"><a href="#workshops">Workshops</a></li>
+				<li class="tab col s12 m4"><a href="#miscellaneous">Miscellaneous</a></li>
+			  </ul>
+			</div>
+
+			<!-- Conference Section -->
+			<div id="conference" class="col s12">
+				
+				<!-- Check js/schedule-page.js -->
+				<div id="cards" class="grid md:grid-cols-2 sm:grid-cols-1 gap-5"></div>
+		
+				<br><br>
+			</div>
+
+			<!-- Workshops Section -->
+			<div id="workshops" class="col s12 row">
+				<br>
+				<div class="col s12 m6">
+					<div id="workshop1" class="program-card col-span-full color-dark first-in-line white-text">
+						<span class="prog-hour">09</span><span class="prog-minutes">50</span>
+						<div class="row">
+							<div class="col s11">
+								<span class="schedule-title-main" style="font-weight: bold;">Title 1</span>
+							</div>
+						</div>
+						<div class="row" style="margin-top: 10px;">
+							<div class="col l12 s11">
+								<h6 class="valign-wrapper"><i class="material-icons">schedule</i> &nbsp;3 Hours</h6>
+								<h6 class="valign-wrapper"><i class="material-icons">location_on</i> Workshop Area</h6>
+								<h6 class="valign-wrapper"><i class="material-icons">luggage</i> Requirement : Your Computer</h6>
+								<h6 class="valign-wrapper"><i class="material-icons">person</i> Speaker</h6>
+								<a class="modal-trigger" href="#bl4vMy0pnM6t3CGfeMX8" style="color: white;">
+									<div class="row" style="margin-top: 10px; margin-bottom: 0;">
+										<div class="col s12">
+											<img align="left" class="circle" src="images/speakers/photo.png" style="height: 32px; margin-right: 10px;">
+											<span>John Doe</span>
+											<br>
+											<span style="font-size: 12px;">A Company</span>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="row" style="margin-top: 10px;">
+							<div class="col s12">
+								<b>Abstract</b>
+								<br>
+								Lorem Elsass ipsum leverwurscht tchao bissame placerat so dolor Racing. mollis knepfle gal nullam amet Strasbourg barapli libero.
+								<br><br>
+								habitant Richard Schirmeck sit rucksack flammekueche hopla et ornare Huguette Chulien réchime Yo dû. tristique Heineken lotto-owe météor hopla  Wurschtsalad schnaps Mauris Chulia Roberstau leo semper Spätzle chambon turpis ac rhoncus gravida Gal !
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m6">
+					<div id="workshop2" class="program-card col-span-full color-light first-in-line black-text">
+						<span class="prog-hour">14</span><span class="prog-minutes">00</span>
+						<div class="row">
+							<div class="col s11">
+								<span class="schedule-title-main" style="font-weight: bold;">Title 2</span>
+							</div>
+						</div>
+						<div class="row" style="margin-top: 10px;">
+							<div class="col l12 s11">
+								<h6 class="valign-wrapper"><i class="material-icons">schedule</i> &nbsp;3 Hours</h6>
+								<h6 class="valign-wrapper"><i class="material-icons">location_on</i> Workshop Area</h6>
+								<h6 class="valign-wrapper"><i class="material-icons">luggage</i> Requirement : Your Computer</h6>
+								<h6 class="valign-wrapper"><i class="material-icons">person</i> Speaker</h6>
+								<a class="modal-trigger" href="#CftejSsHrVKHlPYcr7EN" style="color: black;">
+									<div class="row" style="margin-top: 10px; margin-bottom: 0;">
+										<div class="col s12">
+											<img align="left" class="circle" src="images/speakers/photo.png" style="height: 32px; margin-right: 10px;">
+											<span>John Doe</span>
+											<br>
+											<span style="font-size: 12px;">A Company</span>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="row" style="margin-top: 10px;">
+							<div class="col s12">
+								<b>Abstract</b>
+								<br>
+								habitant Richard Schirmeck sit rucksack flammekueche hopla et ornare Huguette Chulien réchime Yo dû. tristique Heineken lotto-owe météor hopla  Wurschtsalad schnaps Mauris Chulia Roberstau leo semper Spätzle chambon turpis ac rhoncus gravida Gal !
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- miscellaneous -->
+			<div id="miscellaneous" class="col s12">
+				<br>
+				<div class="row">
+					<div class="col s12 m6">
+						<div class="program-card col-span-full first-in-line black-text" style="background-color: #ecf1fd;">
+							<span class="prog-hour">13</span><span class="prog-minutes">00</span> - <span class="prog-hour">17</span><span class="prog-minutes">00</span>
+							<div class="row">
+								<div class="col s11">
+									<span class="schedule-title-main" style="font-weight: bold;">Free boat tour 🚢</span>
+									<p>Enjoy a free ~15min trip on our electric boat around the Phare Citadelle peninsula and find clues for the CTF.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6">
+						<div class="program-card col-span-full first-in-line black-text" style="background-color: #fff5ed;">
+							<span class="prog-hour">From 16</span><span class="prog-minutes">20</span>
+							<div class="row">
+								<div class="col s11">
+									<span class="schedule-title-main" style="font-weight: bold;">Happy Hour 🍺</span>
+									<p>Enjoy a refreshing drink or beer on Strasbourg's largest waterside terrace. (We've got room inside, too, in case of cloudy weather.)</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12">
+						<div class="program-card col-span-full first-in-line black-text">
+							<span class="prog-hour">All Day Long</span>
+							<div class="row">
+								<div class="col s12">
+									<span class="schedule-title-main" style="font-weight: bold;">Hacking Village 🔒</span>
+									<p>Explore the hack village to discover new practices in the cyber world and meet our partners.</p>
+									<div class="row">
+										<div class="col s12 m4 center-align" style="color: white; padding: 5px;">
+											<div class="activity_card">
+												<i style="font-size: 5em;" class="material-icons">vpn_key</i>
+												<br>
+												<h5 style="margin-top: -10px; margin-bottom: -10px;">Lock Picking Booth</h5>
+												<br>
+												Discover lock picking with our experts on real demonstration locks.
+											</div>
+										</div>
+										<div class="col s12 m4 center-align" style="color: white; padding: 5px;">
+											<div class="activity_card">
+												<i style="font-size: 5em;" class="material-icons">cable</i>
+												<br>
+												<h5 style="margin-top: -10px; margin-bottom: -10px;">Cable Management Booth</h5>
+												<br>
+												Get rid of tangles.
+											</div>
+										</div>
+										<div class="col s12 m4 center-align" style="color: white; padding: 5px;">
+											<div class="activity_card">
+												<i style="font-size: 5em;" class="material-icons">grade</i>
+												<br>
+												<h5 style="margin-top: -10px; margin-bottom: -10px;">Hacking Demo</h5>
+												<br>
+												Discover our partners' booths and demonstrations
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+				
+		
+
+		
+	</div>
+
+	<!-- Modal Structure -->
+	<div id="modals">
+	</div>
+
+	<div id="footer"></div>
+	<div id="tabbar"></div>
+
+	<script src="app.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/bsides.js"></script>
+	<script type="text/javascript" src="js/schedule-page.js"></script>
+	<script>
+        var firestore = firebase.firestore();
+	
+        function addRandomSpeakers() {
+            let speakers = [];
+
+            firestore.collection("speakers").get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                        speakers.push(doc.data());
+                });
+                speakers.sort(() => 0.5 - Math.random());
+                for (let i = 0; i < 4; ++i) {
+                    $('#rspeakers').append(`
+                        <div class="col s12 l3">
+                            <img src="${speakers[i].photoUrl}" class="circle" height="128">
+                            <h3 style="font-size: 24px; margin-bottom: 0px;">${speakers[i].name}</h3>
+                            <div class="origin">${speakers[i].company}</div>
+                            <div class="origin">${speakers[i].country}</div>
+                        </div>
+                    `);
+                }
+            });
+        }
+        addRandomSpeakers();
+		document.addEventListener('DOMContentLoaded', function() {
+			var elems = document.querySelectorAll('.tabs');
+			var instance = M.Tabs.init(elems);
+		});
+    </script>
+</body>
+</html>

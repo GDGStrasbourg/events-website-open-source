@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="style.css"  media="screen,projection"/>
+	
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="icon" type="image/ico" href="favicon.png" />
+	
+	<title>BSides Strasbourg 2024</title>
+	
+</head>
+
+<body>
+	
+	<div class="page-header" style="background: url(images/backgrounds/BannerCTF.png) no-repeat center center;">
+		<div class="navbar-fixed">
+			<nav class="top-navbar transparent z-depth-0 hide-on-med-and-down">
+				<div class="container">
+					<div class="nav-wrapper">
+						<div id="navbar-content"></div>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div class="container-special">
+		    <h1 class="page-title white-text">Speakers</h1>
+            <p class="page-description white-text">Discover BSides Strasbourg 2024 speakers. From all over the world and dozens of companies. Hosting conferences, shorts and workshops.</p>
+        </div>
+	</div>
+
+	<div class="speakers-display-block container-special">
+        <br><br>
+        
+			<div id="cards" class="flex"></div>
+		
+	</div>
+
+	<!-- Modal Structure -->
+	<div id="modals">
+	</div>
+
+
+	<div id="footer"></div>
+	<div id="tabbar"></div>
+
+	<script src="app.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/bsides.js"></script>
+	<script type="text/javascript" src="js/speaker-page.js"></script>
+</body>
+</html>

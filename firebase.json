@@ -1,0 +1,68 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/coc",
+        "destination": "/codeofconduct.html"
+      },
+      {
+        "source": "/team",
+        "destination": "/team.html"
+      },
+      {
+        "source": "/ctf",
+        "destination": "/ctf.html"
+      },
+      {
+        "source": "/speakers",
+        "destination": "/speakers.html"
+      },
+      {
+        "source": "/venue",
+        "destination": "/venue.html"
+      },
+      {
+        "source": "/schedule",
+        "destination": "/schedule.html"
+      },
+      {
+        "source": "/privacy",
+        "destination": "/privacy.html"
+      },
+      {
+        "source": "/fr/coc",
+        "destination": "/fr/codeofconduct.html"
+      },
+      {
+        "source": "/fr/team",
+        "destination": "/fr/team.html"
+      },
+      {
+        "source": "/fr/ctf",
+        "destination": "/fr/ctf.html"
+      },
+      {
+        "source": "/fr/speakers",
+        "destination": "/fr/speakers.html"
+      },
+      {
+        "source": "/fr/venue",
+        "destination": "/fr/venue.html"
+      },
+      {
+        "source": "/fr/schedule",
+        "destination": "/fr/schedule.html"
+      },
+      {
+        "source": "/fr/privacy",
+        "destination": "/fr/privacy.html"
+      }
+    ]
+  }
+}
