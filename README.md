@@ -15,3 +15,14 @@ This template is made to work Firebase
 - `Firebase init` > Select your project
 - `Firebase emulators:start` to start navigating
 - `Firebase deploy`
+
+## Structure
+
+Each page is a .html file in /public folder
+Custom CSS is stored in style.css
+
+Top menu, Mobile bottom menu and Footer are located in `elements` folder
+Dynmic elements (Speakers display, Agenda) are located in `js`
+
+
+
