@@ -7,7 +7,7 @@ It is open-source and free to use, only require attribution to Capitale Dev
 This website uses following tools :
 - MaterializeCSS https://github.com/Dogfalo/materialize
 - GrilladeCSS https://github.com/alsacreations/KNACSS
-Design based on Hoverboard : https://github.com/gdg-x/hoverboard
+- Design based on Hoverboard : https://github.com/gdg-x/hoverboard
 
 ## How to use it
 This template is made to work Firebase
